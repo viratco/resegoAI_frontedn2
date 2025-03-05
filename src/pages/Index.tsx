@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { Instagram, Linkedin } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
-
 const Index = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -144,7 +143,7 @@ const Index = () => {
                 <div className="w-full md:w-1/2 p-6 flex items-center justify-center">
                   <div className="w-full h-full max-h-[700px] overflow-hidden rounded-lg">
                     <img 
-                      src="report.jpg" 
+                       src="/report.jpg" 
                       alt="AI-powered research" 
                       className="w-full h-full object-cover"
                     />
@@ -208,7 +207,7 @@ const Index = () => {
                 <div className="w-full md:w-1/2 p-6 flex items-center justify-center">
                   <div className="w-full h-full max-h-[900px] overflow-hidden rounded-lg">
                     <img 
-                      src="paper.jpg" 
+                      src="/paper.jpg" 
                       alt="AI collaboration" 
                       className="w-full h-full object-cover"
                     />
@@ -468,7 +467,7 @@ const Index = () => {
             </h2>
             <div className="flex justify-center gap-6">
               <a
-                href="https://instagram.com/your-handle"
+                href="https://www.instagram.com/resegoai_/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-[#8B5CF6]/10 text-[#8B5CF6] hover:bg-[#8B5CF6]/20 transition-colors"
@@ -476,7 +475,7 @@ const Index = () => {
                 <Instagram className="w-6 h-6" />
               </a>
               <a
-                href="https://linkedin.com/in/your-profile"
+                href="https://www.linkedin.com/in/resego-ai-046154354/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-[#8B5CF6]/10 text-[#8B5CF6] hover:bg-[#8B5CF6]/20 transition-colors"
