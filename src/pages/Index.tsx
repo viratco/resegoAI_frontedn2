@@ -78,16 +78,16 @@ const Index = () => {
               Explore cutting-edge AI research papers, collaborate with experts, and
               stay ahead in the rapidly evolving field of artificial intelligence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col items-center gap-6">
               {user ? (
                 <Link to="/research">
-                  <Button size="lg">
+                  <Button size="lg" className="w-full sm:w-auto">
                     Start Researching
                   </Button>
                 </Link>
               ) : (
-                <div className="space-y-4">
-                  <p className="text-gray-600">
+                <div className="space-y-4 w-full sm:w-auto">
+                  <p className="text-gray-600 text-center">
                     Sign in to access research features
                   </p>
                   <div className="flex gap-4 justify-center">
@@ -100,7 +100,7 @@ const Index = () => {
                   </div>
                 </div>
               )}
-              <div className="flex gap-4 mt-8">
+              <div className="flex justify-center w-full sm:w-auto">
                 <button
                   onClick={() => {
                     document.getElementById('how-it-works')?.scrollIntoView({ 
@@ -108,11 +108,10 @@ const Index = () => {
                       block: 'start'
                     });
                   }}
-                  className="bg-[#8B5CF6] text-white px-6 py-2 rounded-lg hover:bg-[#7C3AED] transition-colors"
+                  className="bg-[#8B5CF6] text-white px-6 py-2.5 rounded-lg hover:bg-[#7C3AED] transition-colors font-medium"
                 >
                   How it Works
                 </button>
-                {/* ... other buttons ... */}
               </div>
             </div>
           </div>

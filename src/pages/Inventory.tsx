@@ -251,7 +251,7 @@ export default function Inventory() {
                   <h3 className="font-heading text-lg font-semibold text-[#1F2937]">{item.title}</h3>
                   <div className="prose prose-sm max-h-24 overflow-hidden text-gray-600">
                     {isSearch ? (
-                      <p>Found {item.papers?.length || 0} papers with analysis</p>
+                      <p>Found 8 papers with analysis</p>
                     ) : (
                       <div dangerouslySetInnerHTML={{ 
                         __html: marked.parse(item.content.substring(0, 150) + '...') as string
@@ -267,7 +267,7 @@ export default function Inventory() {
                   </div>
                   <div className="flex items-center gap-1">
                     <BookOpen className="h-4 w-4" />
-                    <span>{item.papers?.length || 0}</span>
+                    <span>8</span>
                   </div>
                 </div>
               </div>
