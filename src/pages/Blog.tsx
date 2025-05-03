@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 const articles = [
   {
@@ -234,7 +235,7 @@ const Blog = () => {
           <h2 className="text-3xl font-bold mb-4">Get Started with Resego AI</h2>
           <div className="bg-white rounded-lg shadow p-6">
             <p className="text-lg text-gray-700 mb-4">Sign up for a free trial and experience the power of AI-powered research and productivity.</p>
-            <a href="#" className="inline-block px-8 py-3 rounded-full bg-[#8B5CF6] text-white font-bold shadow-lg hover:bg-[#7c3aed] transition-all">Sign Up</a>
+            <Link to="/signup" className="inline-block px-8 py-3 rounded-full bg-[#8B5CF6] text-white font-bold shadow-lg hover:bg-[#7c3aed] transition-all">Get Started with Resego AI</Link>
           </div>
         </section>
 
@@ -242,9 +243,8 @@ const Blog = () => {
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-4">Share This Post</h2>
           <div className="flex flex-wrap gap-4">
-            <a href="#" className="bg-gray-200 rounded-full px-4 py-2 text-gray-700">Twitter</a>
-            <a href="#" className="bg-gray-200 rounded-full px-4 py-2 text-gray-700">Facebook</a>
-            <a href="#" className="bg-gray-200 rounded-full px-4 py-2 text-gray-700">LinkedIn</a>
+            <a href="https://www.instagram.com/resegoai_/" className="bg-gray-200 rounded-full px-4 py-2 text-gray-700">Instagram</a>
+            <a href="https://www.linkedin.com/in/resego-ai-046154354/" className="bg-gray-200 rounded-full px-4 py-2 text-gray-700">LinkedIn</a>
           </div>
         </section>
       </div>

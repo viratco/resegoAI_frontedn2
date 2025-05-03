@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 const About = () => (
   <div>
@@ -116,7 +117,7 @@ const About = () => (
         <p className="text-gray-700 mb-6">Founded by passionate technologists and researchers, Resego AI was born out of a need to simplify the overwhelming process of research. Our team is committed to continuous innovation to help users stay ahead in their fields.</p>
         <div className="flex flex-wrap gap-6 justify-center">
           <div className="flex flex-col items-center">
-            <img src="" alt="Alex T." className="w-20 h-20 rounded-full mb-2" />
+           
             <span className="font-semibold text-[#7c3aed]">Virat V.</span>
             <span className="text-xs text-gray-500">Founder, CEO</span>
             <span className="text-xs italic text-gray-400 mt-1">"AI should empower, not overwhelm."</span>
@@ -141,7 +142,7 @@ const About = () => (
     {/* CTA Section */}
     <section className="w-full py-12 bg-gradient-to-r from-[#a78bfa]/70 via-[#ede9fe]/80 to-white flex flex-col items-center">
       <h2 className="text-3xl font-bold text-[#7c3aed] mb-4">Ready to Revolutionize Your Research?</h2>
-      <a href="/signup" className="inline-block px-8 py-3 rounded-full bg-[#8B5CF6] text-white font-bold shadow-lg hover:bg-[#7c3aed] transition-all">Get Started with Resego AI</a>
+      <Link to="/signup" className="inline-block px-8 py-3 rounded-full bg-[#8B5CF6] text-white font-bold shadow-lg hover:bg-[#7c3aed] transition-all">Get Started with Resego AI</Link>
     </section>
   </div>
 );
