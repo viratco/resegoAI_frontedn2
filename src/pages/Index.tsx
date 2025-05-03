@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Instagram, Linkedin } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet";
 const Index = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,7 +60,19 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden">
+    <>
+      <Helmet>
+        <title>Resego AI | Intelligent Research Assistant</title>
+        <meta name="description" content="Resego AI streamlines academic and professional research by summarizing articles, extracting key insights, and organizing information efficiently. Discover smart summarization, insight extraction, and organized storage for all your research needs." />
+        <script type="application/ld+json">{JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          'name': 'Resego AI',
+          'description': 'Resego AI streamlines academic and professional research by summarizing articles, extracting key insights, and organizing information efficiently.',
+          'url': 'https://yourdomain.com/'
+        })}</script>
+      </Helmet>
+      <div className="min-h-screen w-full overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
         <div className="absolute inset-0 bg-gradient-to-br from-[#F1F0FB] via-white to-[#E5DEFF] -z-10" />
@@ -75,8 +88,7 @@ const Index = () => {
               <span className="text-[#8B5CF6]">AI Research</span>
             </h1>
             <p className="text-lg md:text-xl text-[#6B7280] max-w-2xl mx-auto mb-8">
-              Explore cutting-edge AI research papers, collaborate with experts, and
-              stay ahead in the rapidly evolving field of artificial intelligence.
+              Resego AI is an intelligent research assistant designed to streamline academic and professional research by summarizing articles, extracting key insights, and organizing information efficiently. Explore cutting-edge AI research papers, collaborate with experts, and stay ahead in the rapidly evolving field of artificial intelligence.
             </p>
             <div className="flex flex-col items-center gap-6">
               {user ? (
@@ -120,6 +132,62 @@ const Index = () => {
 
       {/* Features Section - seamless connection with the hero section */}
       <section className="py-20 px-4 bg-gradient-to-br from-[#F1F0FB] via-[#F5F3FF] to-[#E5DEFF]">
+        {/* Key Features Section */}
+        <div className="container max-w-6xl mx-auto mb-20">
+          <div className="text-center mb-12 animate-on-scroll opacity-0" data-animation="fade-in-up">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#8B5CF6] to-[#D946EF]">
+              Key Features
+            </h2>
+            <p className="text-[#6B7280] max-w-2xl mx-auto">
+              Resego AI empowers you with smart summarization, insight extraction, and organized storage for efficient research.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center">
+              <Brain className="w-10 h-10 text-violet-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Smart Summarization</h3>
+              <p>Quickly distill lengthy articles into concise summaries.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center">
+              <Sparkles className="w-10 h-10 text-violet-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Insight Extraction</h3>
+              <p>Identify and highlight critical points and data.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center">
+              <Database className="w-10 h-10 text-violet-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Organized Storage</h3>
+              <p>Save and categorize research materials for easy access.</p>
+            </div>
+          </div>
+        </div>
+        {/* Use Cases Section */}
+        <div className="container max-w-6xl mx-auto mb-20">
+          <div className="text-center mb-12 animate-on-scroll opacity-0" data-animation="fade-in-up">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#8B5CF6] to-[#D946EF]">
+              Who Can Benefit?
+            </h2>
+            <p className="text-[#6B7280] max-w-2xl mx-auto">
+              Resego AI is designed for everyone involved in research and knowledge work.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center">
+              <Users className="w-10 h-10 text-violet-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Students</h3>
+              <p>Simplify literature reviews and study materials.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center">
+              <Network className="w-10 h-10 text-violet-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Researchers</h3>
+              <p>Accelerate data analysis and hypothesis formation.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center">
+              <ChartLine className="w-10 h-10 text-violet-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Professionals</h3>
+              <p>Stay updated with industry trends efficiently.</p>
+            </div>
+          </div>
+        </div>
         <div className="container max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-on-scroll opacity-0" data-animation="fade-in-up">
             <span className="px-4 py-2 rounded-full bg-[#8B5CF6]/10 text-[#8B5CF6] font-medium text-sm mb-6 inline-block">
@@ -430,28 +498,58 @@ const Index = () => {
 
             {/* Right Column - Step Descriptions */}
             <div className="space-y-8">
-              {steps.slice(0, 4).map((step, index) => (
-                <div
-                  key={step.title}
-                  className="animate-on-scroll opacity-0 bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-[#E5DEFF] shadow-lg"
-                  data-animation="fade-in-blur"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[#8B5CF6]/10 rounded-lg flex items-center justify-center shrink-0">
-                      <span className="text-lg font-bold text-[#8B5CF6]">{index + 1}</span>
-                    </div>
-                    <div>
-                      <h3 className="font-heading text-xl font-semibold mb-2 text-[#1F2937]">
-                        {step.title}
-                      </h3>
-                      <p className="text-[#6B7280] leading-relaxed">
-                        {step.description}
-                      </p>
-                    </div>
+              {/* How It Works: Vertical Stepper Section */}
+              <section className="py-16 w-full">
+                <h2 className="text-3xl font-bold text-center mb-10 text-[#8B5CF6]">How It Works</h2>
+                <div className="flex flex-col md:flex-row items-center md:items-start justify-center max-w-5xl mx-auto">
+                  {/* Vertical stepper (left) */}
+                  <div className="hidden md:flex flex-col items-center mr-10 relative">
+                    {[1, 2, 3, 4].map((num, idx) => (
+                      <div key={num} className="flex flex-col items-center">
+                        <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#a78bfa]/20 border-4 border-[#8B5CF6] text-[#8B5CF6] text-2xl font-bold z-10">
+                          {num}
+                        </div>
+                        {idx < 3 && (
+                          <div className="h-20 w-1 bg-gradient-to-b from-[#8B5CF6] to-[#ede9fe] my-1" />
+                        )}
+                      </div>
+                    ))}
+                    {/* Vertical line background for mobile (hidden on md+) */}
+                  </div>
+                  {/* Step cards (right) */}
+                  <div className="flex-1 grid grid-cols-1 gap-8">
+                    {[
+                      {
+                        title: "Create an Account",
+                        description: "Sign up for free and set up your research profile with your interests and expertise.",
+                      },
+                      {
+                        title: "Explore Research",
+                        description: "Browse our extensive database of AI research papers and find relevant content.",
+                      },
+                      {
+                        title: "Save & Organize",
+                        description: "Save papers to your inventory and organize them with tags and collections.",
+                      },
+                      {
+                        title: "Stay Updated",
+                        description: "Get notifications about new papers in your field and track research trends.",
+                      },
+                    ].map((step, idx) => (
+                      <div key={step.title} className="bg-white/90 rounded-xl shadow-lg p-8 flex flex-col text-left border-t-4 border-[#8B5CF6] md:ml-0 md:mr-4 relative">
+                        <div className="md:hidden flex items-center mb-2">
+                          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#a78bfa]/20 border-2 border-[#8B5CF6] text-[#8B5CF6] text-xl font-bold mr-3">
+                            {idx + 1}
+                          </div>
+                          <span className="font-bold text-[#8B5CF6]">Step {idx + 1}</span>
+                        </div>
+                        <h3 className="font-semibold text-lg mb-2 text-gray-900">{step.title}</h3>
+                        <p className="text-gray-600 leading-relaxed text-sm">{step.description}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              ))}
+              </section>
             </div>
           </div>
         </div>
@@ -496,92 +594,7 @@ const Index = () => {
         <ArrowRight className="w-5 h-5 -rotate-90" />
       </button>
     </div>
-  );
-};
-
-const features = [
-  {
-    icon: Brain,
-    title: "Smart Search",
-    description:
-      "Advanced AI-powered search to find relevant research papers instantly.",
-  },
-  {
-    icon: Network,
-    title: "Collaboration",
-    description:
-      "Connect with fellow researchers and collaborate on groundbreaking projects.",
-  },
-  {
-    icon: Database,
-    title: "Large Database",
-    description:
-      "Access thousands of peer-reviewed AI research papers from top institutions.",
-  },
-  {
-    icon: ChartLine,
-    title: "Analytics",
-    description:
-      "Track research trends and gain insights with powerful analytics tools.",
-  },
-  {
-    icon: Layers,
-    title: "Organization",
-    description:
-      "Keep your research organized with smart collections and tagging.",
-  },
-  {
-    icon: Users,
-    title: "Community",
-    description:
-      "Join a thriving community of AI researchers and share knowledge.",
-  },
-];
-
-const stats = [
-  {
-    value: "50K+",
-    label: "Research Papers",
-  },
-  {
-    value: "100K+",
-    label: "Researchers",
-  },
-  {
-    value: "200+",
-    label: "Institutions",
-  },
-  {
-    value: "95%",
-    label: "Satisfaction Rate",
-  },
-];
-
-const steps = [
-  {
-    title: "Create an Account",
-    description: "Sign up for free and set up your research profile with your interests and expertise.",
-  },
-  {
-    title: "Explore Research",
-    description: "Browse through our extensive database of AI research papers and find relevant content.",
-  },
-  {
-    title: "Save and Organize",
-    description: "Save papers to your inventory and organize them with tags and collections.",
-  },
-  {
-    title: "Stay Updated",
-    description: "Get notifications about new papers in your field and track research trends.",
-  },
-  {
-    title: "Collaborate",
-    description: "Connect with other researchers and collaborate on projects and papers.",
-  },
-  {
-    title: "Share Insights",
-    description: "Share your findings and contribute to the AI research community.",
-  },
-];
+  </>);
+}
 
 export default Index;

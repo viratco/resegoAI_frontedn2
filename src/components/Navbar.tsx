@@ -55,6 +55,34 @@ const Navbar = () => {
               Resego<span className="font-normal">AI</span>
             </h1>
           </div>
+          {/* Centered desktop navigation links */}
+          {!user && (
+            <div className="hidden md:flex flex-1 justify-center">
+              <nav className="flex gap-6">
+                <Link to="/about" className="px-4 py-2 rounded-full bg-[#f3e8ff] text-[#7c3aed] font-semibold shadow-sm hover:bg-[#ede9fe] hover:text-[#6d28d9] transition-all">About</Link>
+                <Link to="/features" className="px-4 py-2 rounded-full bg-[#f3e8ff] text-[#7c3aed] font-semibold shadow-sm hover:bg-[#ede9fe] hover:text-[#6d28d9] transition-all">Features</Link>
+                <Link to="/blog" className="px-4 py-2 rounded-full bg-[#f3e8ff] text-[#7c3aed] font-semibold shadow-sm hover:bg-[#ede9fe] hover:text-[#6d28d9] transition-all">Blog</Link>
+                <Link to="/faq" className="px-4 py-2 rounded-full bg-[#f3e8ff] text-[#7c3aed] font-semibold shadow-sm hover:bg-[#ede9fe] hover:text-[#6d28d9] transition-all">FAQ</Link>
+              </nav>
+            </div>
+          )}
+
+          {/* Mobile navigation menu */}
+          <div className="md:hidden">
+            <button onClick={() => setShowMobileMenu(!showMobileMenu)} className="p-2">
+              <Menu className="w-6 h-6" />
+            </button>
+            {showMobileMenu && !user && (
+  <div ref={mobileMenuRef} className="absolute top-16 left-0 w-full flex justify-center z-50">
+    <div className="bg-white/95 shadow-xl rounded-2xl p-5 flex flex-col items-center gap-3 max-w-xs w-full border border-[#e9d5ff]">
+      <Link to="/about" className="w-full text-center px-4 py-2 rounded-full bg-[#f3e8ff] text-[#7c3aed] font-semibold shadow hover:bg-[#ede9fe] hover:text-[#6d28d9] transition-all" onClick={() => setShowMobileMenu(false)}>About</Link>
+      <Link to="/features" className="w-full text-center px-4 py-2 rounded-full bg-[#f3e8ff] text-[#7c3aed] font-semibold shadow hover:bg-[#ede9fe] hover:text-[#6d28d9] transition-all" onClick={() => setShowMobileMenu(false)}>Features</Link>
+      <Link to="/blog" className="w-full text-center px-4 py-2 rounded-full bg-[#f3e8ff] text-[#7c3aed] font-semibold shadow hover:bg-[#ede9fe] hover:text-[#6d28d9] transition-all" onClick={() => setShowMobileMenu(false)}>Blog</Link>
+      <Link to="/faq" className="w-full text-center px-4 py-2 rounded-full bg-[#f3e8ff] text-[#7c3aed] font-semibold shadow hover:bg-[#ede9fe] hover:text-[#6d28d9] transition-all" onClick={() => setShowMobileMenu(false)}>FAQ</Link>
+    </div>
+  </div>
+)}
+          </div>
 
           {user && (
             <div className="flex-1 flex justify-center items-center mx-4">

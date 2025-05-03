@@ -1,4 +1,4 @@
-import { Routes as RouterRoutes, Route, Navigate } from 'react-router-dom'
+import { Routes as RouterRoutes, Route, Navigate, useLocation } from 'react-router-dom'
 import { SignIn } from './components/auth/SignIn'
 import { SignUp } from './components/auth/SignUp'
 import { ProtectedRoute } from './components/ProtectedRoute'
@@ -9,9 +9,14 @@ import Index from './pages/Index'
 import Navbar from './components/Navbar'
 import { useAuth } from '@/contexts/AuthContext'
 import PaperDetails from './pages/PaperDetails'
+import About from './pages/About';
+import Features from './pages/Features';
+import Blog from './pages/Blog';
+import FAQ from './pages/FAQ';
 
 export function Routes() {
   const { user } = useAuth();
+  const location = useLocation();
 
   return (
     <>
@@ -21,6 +26,10 @@ export function Routes() {
           path="/" 
           element={user ? <Navigate to="/research" replace /> : <Index />} 
         />
+        <Route path="/about" element={<About />} />
+        <Route path="/features" element={<Features />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route 
@@ -37,7 +46,7 @@ export function Routes() {
             <Navigate 
               to="/research" 
               replace 
-              state={location.state} 
+              state={location.state || {}} 
             />
           } 
         />
