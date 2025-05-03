@@ -116,29 +116,12 @@ const About = () => (
         <p className="text-gray-700 mb-6">Founded by passionate technologists and researchers, Resego AI was born out of a need to simplify the overwhelming process of research. Our team is committed to continuous innovation to help users stay ahead in their fields.</p>
         <div className="flex flex-wrap gap-6 justify-center">
           <div className="flex flex-col items-center">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Alex T." className="w-20 h-20 rounded-full mb-2" />
-            <span className="font-semibold text-[#7c3aed]">Alex T.</span>
-            <span className="text-xs text-gray-500">Co-Founder, CEO</span>
+            <img src="" alt="Alex T." className="w-20 h-20 rounded-full mb-2" />
+            <span className="font-semibold text-[#7c3aed]">Virat V.</span>
+            <span className="text-xs text-gray-500">Founder, CEO</span>
             <span className="text-xs italic text-gray-400 mt-1">"AI should empower, not overwhelm."</span>
           </div>
-          <div className="flex flex-col items-center">
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya S." className="w-20 h-20 rounded-full mb-2" />
-            <span className="font-semibold text-[#7c3aed]">Priya S.</span>
-            <span className="text-xs text-gray-500">Co-Founder, CTO</span>
-            <span className="text-xs italic text-gray-400 mt-1">"Tech for good is our mantra."</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Samir K." className="w-20 h-20 rounded-full mb-2" />
-            <span className="font-semibold text-[#7c3aed]">Samir K.</span>
-            <span className="text-xs text-gray-500">Lead Research Scientist</span>
-            <span className="text-xs italic text-gray-400 mt-1">"Curiosity drives discovery."</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Elena R." className="w-20 h-20 rounded-full mb-2" />
-            <span className="font-semibold text-[#7c3aed]">Elena R.</span>
-            <span className="text-xs text-gray-500">Product Designer</span>
-            <span className="text-xs italic text-gray-400 mt-1">"Design is intelligence made visible."</span>
-          </div>
+          
         </div>
       </div>
     </section>
@@ -149,8 +132,8 @@ const About = () => (
         <p className="text-gray-700 mb-4">We love to hear from researchers, students, and the curious! Reach out or follow us:</p>
         <div className="flex justify-center gap-6 mb-4">
           <a href="mailto:hello@resegohq.com" className="text-[#8B5CF6] hover:underline font-semibold">Email</a>
-          <a href="#" className="text-[#8B5CF6] hover:underline font-semibold">Twitter</a>
-          <a href="#" className="text-[#8B5CF6] hover:underline font-semibold">LinkedIn</a>
+          <a href="https://www.instagram.com/resegoai_/" className="text-[#8B5CF6] hover:underline font-semibold">Instagram</a>
+          <a href="https://www.linkedin.com/in/resego-ai-046154354/" className="text-[#8B5CF6] hover:underline font-semibold">LinkedIn</a>
         </div>
         <span className="text-xs text-gray-400">&copy; {new Date().getFullYear()} Resego AI. All rights reserved.</span>
       </div>
