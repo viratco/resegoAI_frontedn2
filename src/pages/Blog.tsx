@@ -49,7 +49,56 @@ const posts = [
     },
     tags: ["AI", "Research", "Trends"],
     excerpt: "Explore the latest ways AI is revolutionizing academic and professional research workflows.",
-    content: <p>Explore the latest ways AI is revolutionizing academic and professional research workflows in 2025.</p>,
+    content: (
+  <>
+    <section className="mb-8">
+      <h1 className="text-4xl font-bold mb-4">How AI is Transforming Research in 2025</h1>
+      <p className="text-lg mb-6">Artificial Intelligence is no longer just a tool — it’s becoming a research partner. In 2025, AI has deeply integrated into the workflows of academic institutions, independent researchers, and industry labs. This post explores how AI is redefining research from discovery to documentation.</p>
+      <ol className="list-decimal ml-6 space-y-4">
+        <li>
+          <span className="font-semibold">🔍 1. Accelerating Literature Reviews</span>
+          <p>Tools like <strong>Resego AI</strong> summarize dozens of papers in minutes, extract key arguments, and highlight gaps. Researchers now spend less time reading and more time analyzing.</p>
+        </li>
+        <li>
+          <span className="font-semibold">🧠 2. Smarter Discovery Engines</span>
+          <p>AI-powered engines understand natural language queries, recommend relevant work, and identify unseen connections between concepts across disciplines.</p>
+        </li>
+        <li>
+          <span className="font-semibold">🛠️ 3. Personalized Research Assistants</span>
+          <p>With user-specific models, AI now understands a researcher’s area of interest, filters noise, and suggests only the most relevant papers or studies.</p>
+        </li>
+        <li>
+          <span className="font-semibold">📊 4. Automated Report Generation</span>
+          <p>From summaries to formatted citations and collaborative editing, AI reduces repetitive tasks and increases writing quality and consistency.</p>
+        </li>
+        <li>
+          <span className="font-semibold">🤝 5. Enhanced Collaboration</span>
+          <p>AI-powered tools allow shared annotations, idea clustering, and cross-institution brainstorming in real-time, removing silos from collaborative research.</p>
+        </li>
+      </ol>
+      <div className="mt-8">
+        <p className="mb-2">Want to learn more about how AI can help your research? Check our <Link to="/features" className="text-[#8B5CF6] underline">Features</Link> or visit our <Link to="/faq" className="text-[#8B5CF6] underline">FAQ</Link> page.</p>
+      </div>
+    </section>
+    <section className="mb-8">
+      <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+      <div className="space-y-4">
+        <div>
+          <h3 className="font-semibold">How does Resego AI help with literature reviews?</h3>
+          <p>Resego AI automatically summarizes papers, extracts key points, and highlights research gaps, saving researchers hours of manual reading.</p>
+        </div>
+        <div>
+          <h3 className="font-semibold">Is AI reliable for generating research reports?</h3>
+          <p>Yes, modern AI tools generate accurate, well-formatted reports with citations, and support collaborative editing to ensure quality and consistency.</p>
+        </div>
+        <div>
+          <h3 className="font-semibold">Can AI personalize recommendations for my field?</h3>
+          <p>Absolutely! AI models can be tailored to your interests, filtering out noise and surfacing the most relevant studies and papers for you.</p>
+        </div>
+      </div>
+    </section>
+  </>
+),
     featured: true
   },
   {
@@ -68,16 +117,16 @@ const posts = [
   },
   {
     title: "Why Every Student Needs an AI Research Assistant",
-    slug: "student-ai-research-assistant",
-    date: "2025-03-30",
+    slug: "WhyStudentNeedsAIResearchAssistant",
+    date: "2025-05-10",
     author: {
-      name: "Alex T.",
+      name: "Resego AI Team",
       avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-      role: "Co-Founder"
+      role: "Team"
     },
     tags: ["Students", "AI"],
-    excerpt: "Discover how AI tools can help students save time and improve research outcomes.",
-    content: <p>Discover how AI tools can help students save time and improve research outcomes.</p>,
+    excerpt: "Discover how Resego AI empowers students to master literature reviews, extract insights, organize research, and generate reports with ease.",
+    content: <p>Discover how Resego AI empowers students to master literature reviews, extract insights, organize research, and generate reports with ease.</p>,
     featured: false
   },
   {
@@ -116,6 +165,64 @@ const Blog = () => {
   return (
     <>
       <Helmet>
+  {/* BlogPosting JSON-LD */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: 'How AI is Transforming Research in 2025',
+      image: 'https://resegohq.com/cover-ai-research-2025.png',
+      author: {
+        '@type': 'Person',
+        name: 'Alex T.'
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Resego AI',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://resegohq.com/logo.png'
+        }
+      },
+      datePublished: '2025-05-01',
+      dateModified: '2025-05-01',
+      url: 'https://resegohq.com/blog/ai-transforming-research-2025',
+      description: 'Artificial Intelligence is no longer just a tool — it’s becoming a research partner. In 2025, AI has deeply integrated into research workflows. This post explores how AI is redefining research from discovery to documentation.'
+    })}
+  </script>
+  {/* FAQPage JSON-LD */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How does Resego AI help with literature reviews?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Resego AI automatically summarizes papers, extracts key points, and highlights research gaps, saving researchers hours of manual reading.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Is AI reliable for generating research reports?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes, modern AI tools generate accurate, well-formatted reports with citations, and support collaborative editing to ensure quality and consistency.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Can AI personalize recommendations for my field?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Absolutely! AI models can be tailored to your interests, filtering out noise and surfacing the most relevant studies and papers for you.'
+          }
+        }
+      ]
+    })}
+  </script>
         <title>Blog | Resego AI</title>
         <meta name="description" content="Read articles and insights on AI-powered research and productivity from the Resego AI team." />
       </Helmet>
@@ -128,48 +235,42 @@ const Blog = () => {
           </div>
         </section>
 
-        {/* Featured Post */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">Featured Post</h2>
-          <div className="bg-white rounded-lg shadow p-6">
-            <h3 className="text-2xl font-semibold mb-2">{posts[0].title}</h3>
-            <p className="text-sm text-gray-500 mb-4">{posts[0].date}</p>
-            <div className="prose">{posts[0].content}</div>
-          </div>
-        </section>
-
-        {/* Blog Grid */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">Latest Posts</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {posts.map((post, idx) => (
-              <div key={idx} className="bg-white rounded-lg shadow p-6">
-                <h3 className="text-2xl font-semibold mb-2">{post.title}</h3>
-                <p className="text-sm text-gray-500 mb-4">{post.date}</p>
-                <div className="prose">{post.content}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Newsletter Subscribe */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
-          <div className="bg-white rounded-lg shadow p-6">
-            <p className="text-lg text-gray-700 mb-4">Subscribe to our newsletter for the latest updates, AI research trends, and productivity tips.</p>
-            <form>
-              <input type="email" placeholder="Enter your email address" className="w-full p-4 mb-4 border border-gray-300 rounded-lg" />
-              <button type="submit" className="inline-block px-8 py-3 rounded-full bg-[#8B5CF6] text-white font-bold shadow-lg hover:bg-[#7c3aed] transition-all">Subscribe</button>
-            </form>
-          </div>
-        </section>
-
+        
         {/* Categories/Tags */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-4">Categories</h2>
           <div className="flex flex-wrap gap-4">
             {categories.map((category, idx) => (
               <span key={idx} className="bg-gray-200 rounded-full px-4 py-2 text-gray-700">{category}</span>
+            ))}
+          </div>
+        </section>
+
+        {/* Latest Posts Section */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-8">Latest Posts</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {posts.map(post => (
+              <div key={post.slug} className="bg-white rounded-lg shadow p-6 flex flex-col h-full justify-between">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">{post.title}</h3>
+                  <div className="flex items-center mb-2">
+                    <img src={post.author.avatar} alt={post.author.name} className="w-8 h-8 rounded-full mr-2" />
+                    <span className="text-gray-700 font-medium">{post.author.name}</span>
+                    <span className="mx-2 text-gray-400">•</span>
+                    <span className="text-gray-500 text-sm">{post.date}</span>
+                  </div>
+                  <p className="text-gray-700 mb-4">{post.excerpt}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {post.tags && post.tags.map(tag => (
+                      <span key={tag} className="bg-gray-200 rounded-full px-3 py-1 text-xs text-gray-700">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <Link to={`/blog/${post.slug}`} className="inline-block mt-2 px-6 py-2 rounded bg-[#8B5CF6] text-white font-bold hover:bg-[#7c3aed] transition-all">Read more</Link>
+                </div>
+              </div>
             ))}
           </div>
         </section>

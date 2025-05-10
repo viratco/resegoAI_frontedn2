@@ -12,6 +12,8 @@ import PaperDetails from './pages/PaperDetails'
 import About from './pages/About';
 import Features from './pages/Features';
 import Blog from './pages/Blog';
+import AITransformingResearch2025 from './pages/blog/AITransformingResearch2025';
+import WhyStudentNeedsAIResearchAssistant from './pages/blog/WhyStudentNeedsAIResearchAssistant';
 import FAQ from './pages/FAQ';
 
 export function Routes() {
@@ -29,6 +31,8 @@ export function Routes() {
         <Route path="/about" element={<About />} />
         <Route path="/features" element={<Features />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/ai-transforming-research-2025" element={<AITransformingResearch2025 />} />
+        <Route path="/blog/WhyStudentNeedsAIResearchAssistant" element={<WhyStudentNeedsAIResearchAssistant />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />

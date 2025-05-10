@@ -64,12 +64,42 @@ const Index = () => {
       <Helmet>
         <title>Resego AI | Intelligent Research Assistant</title>
         <meta name="description" content="Resego AI streamlines academic and professional research by summarizing articles, extracting key insights, and organizing information efficiently. Discover smart summarization, insight extraction, and organized storage for all your research needs." />
+        {/* WebSite Schema */}
         <script type="application/ld+json">{JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'WebSite',
           'name': 'Resego AI',
+          'url': 'https://resego-ai-frontedn2.vercel.app',
+          'potentialAction': {
+            '@type': 'SearchAction',
+            'target': 'https://resego-ai-frontedn2.vercel.app/search?q={search_term_string}',
+            'query-input': 'required name=search_term_string'
+          }
+        })}</script>
+        {/* Organization Schema */}
+        <script type="application/ld+json">{JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          'name': 'Resego AI',
+          'url': 'https://resego-ai-frontedn2.vercel.app',
+          'logo': 'https://resego-ai-frontedn2.vercel.app/logo.png',
+          'sameAs': [
+            'https://www.linkedin.com/in/resego-ai-046154354/',
+            'https://www.instagram.com/resegoai_/'
+          ],
+          'contactPoint': [{
+            '@type': 'ContactPoint',
+            'email': 'viratvaroniya31@gmail.com',
+            'contactType': 'Customer Support'
+          }]
+        })}</script>
+        {/* WebPage Schema */}
+        <script type="application/ld+json">{JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          'name': 'Resego AI | Intelligent Research Assistant',
           'description': 'Resego AI streamlines academic and professional research by summarizing articles, extracting key insights, and organizing information efficiently.',
-          'url': 'https://yourdomain.com/'
+          'url': 'https://resego-ai-frontedn2.vercel.app'
         })}</script>
       </Helmet>
       <div className="min-h-screen w-full overflow-x-hidden">
